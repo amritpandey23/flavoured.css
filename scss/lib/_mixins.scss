@@ -1,0 +1,22 @@
+
+/**
+*   Button mixin
+*/
+
+@mixin btn($color, $text_color: $black) {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid $color;
+    border-radius: 3px;
+    padding: 0.45rem 0.65rem;
+    background: $color;
+    color: $text_color;
+    &:hover {
+        background: darken($color, 7%);
+    }
+    &:active {
+        background: darken($color, 12%);
+    }
+}
+
+/*-------*/
