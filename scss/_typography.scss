@@ -1,0 +1,23 @@
+$base_font_size: 1rem;
+$default_font_family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+$text_content_elements: p div span blockquote address article aside footer header nav section;
+
+@each $element in $text_content_elements {
+    #{$element} {
+        font-size: $base_font_size;
+        font-family: $default_font_family;
+        line-height: 1.4;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: 56.25px - 7.5*$i;
+    }
+    h#{$i}.display {
+        font-size: 81px - 9*$i;
+        font-weight: 300;
+        margin: 1.5rem 0;
+    }
+}
