@@ -1,2 +1,7 @@
 @import "_base.scss";
+
+@import "lib/_variables.scss";
+@import "lib/_mixins.scss";
+
 @import "form/_form.scss";
+@import "_typography.scss";
