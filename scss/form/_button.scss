@@ -1,0 +1,20 @@
+
+button {
+    @include btn($white);
+    border-color: $light_gray;
+    &.primary {
+        @include btn($dodger_blue, $white);
+    }
+    &.success {
+        @include btn($parrot_green, $white);
+    }
+    &.danger {
+        @include btn($red, $white);
+    }
+    &.warning {
+        @include btn($yellow);
+    }
+    &.dark {
+        @include btn($black, $white);
+    }
+}
