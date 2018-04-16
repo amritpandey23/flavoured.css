@@ -1,7 +1,8 @@
-
+// imports
 @import "_button.scss";
 @import "_input.scss";
 
+// label
 label {
     cursor: pointer;
     font: {
@@ -9,6 +10,7 @@ label {
     }
 }
 
+// textarea
 textarea {
     width: 100%;
     min-height: 150px;
@@ -17,10 +19,11 @@ textarea {
     outline: none;
     border: 1px solid $light_gray;
     &:focus {
-        border: 1px solid #1e90ff;
+        border: 1px solid $dodger_blue;
     }
 }
 
+// fieldset
 fieldset {
     padding: 1rem 1rem 1.5rem 1rem;
     border: 1.5px solid $light_gray;
@@ -34,6 +37,7 @@ fieldset {
     }
 }
 
+// select
 select {
     padding: 0.45rem 0.65rem;
     outline: none;

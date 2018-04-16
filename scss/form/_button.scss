@@ -1,19 +1,36 @@
+/*
+	Any kind of button styles can be created with btn @mixin,
+	which is available in /scss/lib/_mixins.scss.
 
+	By default, btn @mixin is included in main.scss file
+	from _mixins.scss file.
+*/
 button {
+	// Default styles
     @include btn($white);
     border-color: $light_gray;
+
+	// Primary | class="primary"
     &.primary {
         @include btn($dodger_blue, $white);
     }
+
+	// Success | class="success"
     &.success {
         @include btn($parrot_green, $white);
     }
+
+	// Danger | class="danger"
     &.danger {
         @include btn($red, $white);
     }
+
+	// Warning | class="warning"
     &.warning {
         @include btn($yellow);
     }
+
+	// Dark | class="dark"
     &.dark {
         @include btn($black, $white);
     }

@@ -1,3 +1,9 @@
+
+/*
+	Any kind of <input /> element goes in this file.
+*/
+
+// Base style for input elements
 input {
     outline: none;
     margin: 0;
@@ -10,7 +16,7 @@ input {
     }
 }
 
-
+// Input elements used to take inputs from end-users.
 $text_types: text email password number search tel time url week;
 @each $type in $text_types {
     input[type="#{$type}"] {
@@ -19,11 +25,12 @@ $text_types: text email password number search tel time url week;
         border-radius: 2px;
         line-height: 1.15;
         &:focus {
-            border-color: #1e90ff;
+            border-color: $dodger_blue;
         }
     }
 }
 
+// Toggle Inputs, Checkbox and Radio Buttons
 input[type="checkbox"],
 input[type="radio"] {
     appearance: none;
@@ -39,7 +46,7 @@ input[type="radio"] {
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    background-color: $dodger_blue;
+    background-color: $dodger_blue; // Theme color of radio and checkbox
 	border: 1px solid $dodger_blue;
     color: $white;
 }
@@ -52,10 +59,12 @@ input[type="checkbox"]:checked:after {
     color: #f9f9f9;
 }
 
+// Input submit buttons
 input[type="submit"] {
-    @include btn($parrot_green, $white);
+    @include btn($parrot_green, $white); // Green color
 }
 
+// Input reset button
 input[type="reset"] {
-    @include btn($red, $white);
+    @include btn($red, $white); // Red color
 }
