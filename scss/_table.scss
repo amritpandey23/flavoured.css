@@ -1,0 +1,41 @@
+/*
+    Basic design idea: 
+    1. Alternate light gray vs white on each table row.
+    2. Theme background color on table head row, which is `$dodger_blue`.
+    3. Border on each row matching their background.
+    4. Internal spacing on th: 10px, font-size: 1.1rem
+    5. Internal spacing on td: 9px 10px, font-size: base
+*/
+
+table {
+    overflow: hidden; // set to make border-radius visible on table.
+    border-radius: 3px;
+    border-collapse: collapse;
+    tr {
+        background: $pure_white; // set to prevent display of background from parent element.
+
+        // Alternate background on table rows.
+        &:nth-child(even) {
+            background: darken($white, 5%);
+        }
+        // Border on each table rows except table head row.
+        &:not(:nth-child(1)) {
+            border: 1px solid darken($white, 5%);
+        }
+        // Dodger blue background on heading row.
+        &::nth-child(1) {
+            border: 1px solid $dodger_blue;
+        }
+    }
+    th {
+        background: $dodger_blue; // theme color
+        color: $white;
+        padding: 10px;
+        font-weight: 300;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    td {
+        padding: 9px 10px;
+    }
+}
