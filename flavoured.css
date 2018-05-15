@@ -186,9 +186,17 @@ template {
 */
 /*-------*/
 /**
-*   Button mixin
+*   Button @mixin
+	name: btn
 */
 /*-------*/
+/*
+	Any kind of button styles can be created with btn @mixin,
+	which is available in /scss/lib/_mixins.scss.
+
+	By default, btn @mixin is included in main.scss file
+	from _mixins.scss file.
+*/
 button {
   outline: none;
   cursor: pointer;
@@ -263,6 +271,9 @@ button {
     button.dark:active {
       background: #191b1e; }
 
+/*
+	Any kind of <input /> element goes in this file.
+*/
 input {
   outline: none;
   margin: 0;
@@ -539,3 +550,33 @@ h6.display {
   font-size: 27px;
   font-weight: 300;
   margin: 1.5rem 0; }
+
+/*
+    Basic design idea: 
+    1. Alternate light gray vs white on each table row.
+    2. Theme background color on table head row, which is `$dodger_blue`.
+    3. Border on each row matching their background.
+    4. Internal spacing on th: 10px, font-size: 1.1rem
+    5. Internal spacing on td: 9px 10px, font-size: base
+*/
+table {
+  overflow: hidden;
+  border-radius: 3px;
+  border-collapse: collapse; }
+  table tr {
+    background: #ffffff; }
+    table tr:nth-child(even) {
+      background: #ececec; }
+    table tr:not(:nth-child(1)) {
+      border: 1px solid #ececec; }
+    table tr::nth-child(1) {
+      border: 1px solid #1e90ff; }
+  table th {
+    background: #1e90ff;
+    color: #f9f9f9;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-align: left; }
+  table td {
+    padding: 9px 10px; }
