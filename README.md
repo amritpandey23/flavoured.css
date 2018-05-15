@@ -1,9 +1,8 @@
 # Flavoured.css
 
-A stylesheet that will make your plain html files look better than before. Unlike reset.css
-or normalize.css, flavoured.css is an opinionated, light and cross-browser supported stylesheet that makes default styles better on browsers.
+A stylesheet that will make your plain html files look better than browser-styles. Unlike reset.css or normalize.css, flavoured.css is an opinionated and light CSS stylesheet that make elements look better.
 
-Just include `flavoured.css` in any project.
+Include `flavoured.css`[Download/CDN]('https://rawgit.com/amritpandeyy/flavoured.css/master/flavoured.css') in your project.
 
 ### License
 
