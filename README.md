@@ -6,4 +6,4 @@ Include `flavoured.css`[Download/CDN](https://rawgit.com/amritpandeyy/flavoured.
 
 ### License
 
-MIT
+GPLv3
